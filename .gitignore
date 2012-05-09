@@ -1,0 +1,6 @@
+#ignora os arquivos 
+.classpath
+.project
+.settings
+/bin
+/teste
