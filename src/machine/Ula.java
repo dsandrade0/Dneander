@@ -1,7 +1,7 @@
 package machine;
 
 
-public class Ula {
+public class Ula extends Machine{
 
 	private static Ula single;
 	
@@ -19,31 +19,31 @@ public class Ula {
 	
 	
 	public void nop() {
-		System.out.println("Teste");
+		
 	}
 
 	public void d_add(short op) {
-		
+		D_AC += op;
 	}
 	
 	public void d_subtraction(short op) {
-		
+		D_AC -= op;
 	}
 
 	public void d_or(short op) {
-		
+		D_AC |= op;
 	}
 	
 	public void d_exclusive_or(short op) {
-		
+		D_AC ^= op;
 	}
 
 	public void d_and(short op) {
-		
+		D_AC &= op;
 	}
 
 	public void d_not() {
-		
+		D_AC = ~D_AC;
 	}
 	
 }

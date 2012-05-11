@@ -1,6 +1,6 @@
 package machine;
 
-public class Extension {
+public class Extension extends Machine {
 	
 	static Extension single;
 	
@@ -17,15 +17,17 @@ public class Extension {
 	
 
 	public void d_jump(short op){
-		
+		D_PC = (byte) op;
 	}
 	
-	public void d_jump_on_zero(){
-			
+	public void d_jump_on_zero(short op){
+		if(D_ST == 0)
+			D_PC = (byte) op;
 	}
 	
-	public void d_jump_on_negative(){
-		
+	public void d_jump_on_negative(short op){
+		if(D_ST < 0)
+			D_PC = (byte) op;
 	}
 	
 	public void d_shift_left(short op){
@@ -41,7 +43,7 @@ public class Extension {
 	}
 	
 	public void d_halt(){
-		
+		System.exit(0);
 	}
 	
 }

@@ -1,6 +1,6 @@
 package machine;
 
-public abstract class Machine {
+public class Machine {
 
 	//Define uma memoria de 128 posições para a maquina
 	public static int D_MEMORY[] = new int [128];
@@ -14,7 +14,8 @@ public abstract class Machine {
 	//Registrador de instruções
 	public static byte D_IR;
 	
-	//
+	//Registrador de estado
+	public static byte D_ST;
 	
 	
 }

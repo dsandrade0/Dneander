@@ -1,6 +1,8 @@
 package machine;
 
-public class DataMovie {
+import machine.Machine;
+
+public class DataMovie extends Machine{
 	
 	private static DataMovie single; 
 	
@@ -9,7 +11,7 @@ public class DataMovie {
 	}
 	
 	public static DataMovie getInstance(){
-		if(single == null)
+		if(single != null)
 			return single;
 		
 		single = new DataMovie(); 
@@ -17,11 +19,11 @@ public class DataMovie {
 	}
 	
 	public void d_load(short op){
-		
+		D_AC = op;
 	}
 	
 	public void d_store(short op){
-		
+		D_MEMORY[op] = D_AC;
 	}
 	
 }
