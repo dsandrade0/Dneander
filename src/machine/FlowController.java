@@ -2,16 +2,21 @@ package machine;
 
 public class FlowController {
 
-	public void d_and(short op){
+	private static FlowController single;
+	
+	private FlowController(){
 		
 	}
 	
-	public void d_or(short op){
+	public static FlowController getInstance(){
+		if(single != null)
+			return single;
 		
+		single = new FlowController();
+		return single;
 	}
 	
-	public void d_xor(short op){
-		
-	}
+	
+
 
 }

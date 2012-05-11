@@ -3,6 +3,20 @@ package machine;
 
 public class Ula {
 
+	private static Ula single;
+	
+	private Ula(){
+		
+	}
+	
+	public static Ula getInstance(){
+		if(single != null)
+			return single;
+		
+		single = new Ula();
+		return single;
+	}
+	
 	
 	public void nop() {
 		System.out.println("Teste");

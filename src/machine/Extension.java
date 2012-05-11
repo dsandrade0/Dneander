@@ -1,6 +1,20 @@
 package machine;
 
 public class Extension {
+	
+	static Extension single;
+	
+	private Extension(){
+		
+	}
+	
+	public static Extension getInstance(){
+		if(single != null)
+			return single;
+		single = new Extension();
+		return single;
+	}
+	
 
 	public void d_jump(short op){
 		
