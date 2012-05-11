@@ -2,15 +2,15 @@ package machine;
 
 public class FlowController {
 
-	public void d_load(short op){
+	public void d_and(short op){
 		
 	}
 	
-	public void d_store(short op){
+	public void d_or(short op){
 		
 	}
 	
-	public void d_jump_on_negative(short op){
+	public void d_xor(short op){
 		
 	}
 

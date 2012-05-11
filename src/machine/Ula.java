@@ -5,7 +5,7 @@ public class Ula {
 
 	
 	public void nop() {
-		
+		System.out.println("Teste");
 	}
 
 	public void d_add(short op) {
