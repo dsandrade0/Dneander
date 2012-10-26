@@ -31,15 +31,21 @@ public class Extension extends Machine {
 	}
 	
 	public void d_shift_left(short op){
-		
+		D_AC <<= op;
 	}
 	
 	public void d_shift_rigth(short op){
-		
+		D_AC >>= op;
 	}
 	
 	public void d_memory_dump(){
-		
+		for (int i=0 ; i < D_MEMORY.length; i++) {
+			if (i%6==0){
+				System.out.print(" [pos "+i+" - "+D_MEMORY[i] +"]\n");
+			} else {
+				System.out.print(" [pos "+i+" - "+D_MEMORY[i]+"]");				
+			}
+		}
 	}
 	
 	public void d_halt(){

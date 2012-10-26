@@ -43,7 +43,7 @@ public class Ula extends Machine{
 	}
 
 	public void d_not() {
-		D_AC = ~D_AC;
+		D_AC -= (2 * D_AC);
 	}
 	
 }

@@ -4,7 +4,7 @@ import machine.DataMovie;
 import machine.Ula;
 import machine.Extension;
 
-public class UnitInstruction {
+public class UnitInstruction extends Machine{
 
 	public void callInstruction(Byte upcode, short op) {
 		switch (upcode) {
@@ -61,6 +61,12 @@ public class UnitInstruction {
 
 		}
 
+	}
+	
+	public void callInstruction(int linha) {
+		D_IR = (byte) (linha>>16);
+		short value = (short) ((linha<<16)>>16);
+		this.callInstruction(D_IR, value);
 	}
 
 }
