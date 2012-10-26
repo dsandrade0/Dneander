@@ -61,7 +61,7 @@ public class Janela extends JFrame{
 		int memoriaSize = maquina.D_MEMORY.length;
 		
 		while (true) {
-			if (maquina.D_PC == 128)
+			if (maquina.D_PC == 127)
 				maquina.D_PC = 0;
 			
 			control.callInstruction(maquina.D_MEMORY[maquina.D_PC]);

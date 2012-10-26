@@ -40,7 +40,7 @@ public class Extension extends Machine {
 	
 	public void d_memory_dump(){
 		for (int i=0 ; i < D_MEMORY.length; i++) {
-			if (i%6==0){
+			if (i%6==0 && i != 0){
 				System.out.print(" [pos "+i+" - "+D_MEMORY[i] +"]\n");
 			} else {
 				System.out.print(" [pos "+i+" - "+D_MEMORY[i]+"]");				
