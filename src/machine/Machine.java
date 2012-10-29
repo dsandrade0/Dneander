@@ -13,9 +13,7 @@ public class Machine {
 	
 	//Registrador de instruções
 	public static byte D_IR;
-	
-	//Registrador de estado
-	public static byte D_ST;
+
 	
 	
 }

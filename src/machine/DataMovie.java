@@ -23,11 +23,13 @@ public class DataMovie extends Machine{
 			op -= 127;
 		}
 		D_AC = D_MEMORY[op];
+		D_PC++;
 	}
 	
 	public void d_store(short op){
 		D_MEMORY[op] = D_AC;
 		D_AC = 0;
+		D_PC++;
 	}
 	
 }

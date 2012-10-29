@@ -21,21 +21,23 @@ public class Extension extends Machine {
 	}
 	
 	public void d_jump_on_zero(short op){
-		if(D_ST == 0)
+		if(D_AC == 0)
 			D_PC = (byte) op;
 	}
 	
 	public void d_jump_on_negative(short op){
-		if(D_ST < 0)
+		if(D_AC < 0)
 			D_PC = (byte) op;
 	}
 	
 	public void d_shift_left(short op){
 		D_AC <<= op;
+		D_PC++;
 	}
 	
 	public void d_shift_rigth(short op){
 		D_AC >>= op;
+		D_PC++;
 	}
 	
 	public void d_memory_dump(){
@@ -46,6 +48,7 @@ public class Extension extends Machine {
 				System.out.print(" [pos "+i+" - "+D_MEMORY[i]+"]");				
 			}
 		}
+		D_PC++;
 	}
 	
 	public void d_halt(){

@@ -58,9 +58,8 @@ public class UnitInstruction extends Machine{
 			break;
 		default:
 			System.out.println("Nao existe");
-
 		}
-
+		
 	}
 	
 	public void callInstruction(int linha) {

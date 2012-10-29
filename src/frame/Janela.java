@@ -65,7 +65,6 @@ public class Janela extends JFrame{
 				maquina.D_PC = 0;
 			
 			control.callInstruction(maquina.D_MEMORY[maquina.D_PC]);
-			maquina.D_PC++;
 		}
 		
 	}
